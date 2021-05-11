@@ -1,6 +1,10 @@
+# Echo programs
+
 I've run each program 5 times like so:
 
 ```shell
+cd ch1
+go build echo1
 ./echo1 hi there how is life with covid
 ```
 
@@ -45,3 +49,19 @@ and here's the result
 | 3 | echo5 | 38.268µs |
 | 4 | echo5 | 45.465µs |
 | 5 | echo5 | 55.422µs |
+
+# Dup programs
+
+```shell
+cd ch1
+go run dup1.go
+
+// "wq" to stop scanning standard input
+go run dup2.go
+
+go run dup2.go ./hello.txt ./hello2.txt
+
+go run dup3.go ./hello.txt ./hello2.txt
+
+go run dup4.go ./hello.txt ./hello2.txt
+```
