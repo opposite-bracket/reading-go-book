@@ -65,3 +65,10 @@ go run dup3.go ./hello.txt ./hello2.txt
 
 go run dup4.go ./hello.txt ./hello2.txt
 ```
+
+# Lissajous
+
+```shell
+cs ch1
+go run lissajous.go > out.gif
+```

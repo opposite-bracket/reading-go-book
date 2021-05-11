@@ -11,7 +11,7 @@ func main() {
 	count := make(map[string]int)
 	files := os.Args[1:]
 	if len(files) == 0 {
-		countLines(os.Stdin, count, "")
+		countLines2(os.Stdin, count, "")
 	} else {
 		for _, arg := range files {
 			f, err := os.Open(arg)
@@ -20,7 +20,7 @@ func main() {
 				continue
 			}
 			log.Print(f)
-			countLines(f, count, arg)
+			countLines2(f, count, arg)
 		}
 	}
 	// Ignoring input errors
@@ -29,7 +29,7 @@ func main() {
 	}
 }
 
-func countLines(f *os.File, count map[string]int, fileName string) {
+func countLines2(f *os.File, count map[string]int, fileName string) {
 	input := bufio.NewScanner(f)
 	for input.Scan() {
 		if "wq" == input.Text() {
